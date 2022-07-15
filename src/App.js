@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+//import Drag from './drag'
+import React, { useState } from 'react';
+
+
+function Drag() {
+  return (
+    <div >
+      <textarea></textarea>
+      <br></br>
+    </div>
+  );
+}
+
 
 function App() {
+
+
+
+  const [count, setCount] = useState([]);
+
+  function add(){
+    setCount([...count,
+      {
+        id:count.length,
+        name: <Drag/>,
+      }]);
+  }
+
+
+  const remove = (index) => () =>
+
+    setCount((count) => count.filter((_, i) => i !== index));
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button onClick={add}>ADDDDDDDDDDDDD</button>
+      
+      { count.map((c,index) => {
+        return(
+          <div key={c.id + Math.random()}>
+            
+            {c.name}
+
+            <button onClick={remove(index)}>Deleate</button>
+            {c.id}
+
+            key:{c.id + Math.random()}
+          
+          </div>
+        ) 
+          
+      })}
+
+    </>
   );
 }
 
