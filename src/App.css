@@ -1,0 +1,45 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #FCF7F8;
+}
+
+#big{
+
+}
+
+button{
+    border:solid;
+    border-radius: 0.4rem;
+    padding:0.5rem;
+    border-color: #E2C044;
+    background-color: #FCF7F8;
+
+
+
+}
+
+#co {
+    border:solid;
+    border-radius: 0.4rem;
+    
+    width:20rem;
+    height:10rem;
+    position: relative;
+}
+
+#add{
+    position: fixed;
+    left:90%;
+    top:90%;
+    padding:0.75rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+
+
+
+}
+/* FCF7F8  E2C044  FF785A  000000*/
