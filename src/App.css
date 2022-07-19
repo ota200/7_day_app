@@ -8,6 +8,8 @@ body{
 }
 
 #big{
+    overflow: scroll;
+    height: 100vh;
 
 }
 
@@ -42,6 +44,9 @@ button{
 
 
 }
-
+.head_container {
+    display: grid;
+    grid-template-columns: 10% 80%;
+}
 
 /* FCF7F8  E2C044  FF785A  000000*/

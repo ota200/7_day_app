@@ -6,8 +6,8 @@ import Notes from './notes'
 function App() {
   return (
     <div className="head_container">
-      <Drag/>
       <Notes/>
+      <Drag/>
     </div>
   );
 }
