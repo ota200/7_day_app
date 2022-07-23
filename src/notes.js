@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import Draggable from 'react-draggable';
 
 export default function Notes () {
 
@@ -30,28 +31,33 @@ export default function Notes () {
 
 
   return (
-    <div id="big">
+    <Draggable >
 
-      <form onSubmit={add}>
-        <input onChange={change} ></input>
-      </form>
-      
-    { note.map((c,index) => {
-        return(
-          <div  >
-            <p>{c.value} id:{c.id}</p>
-            <button onClick={remove(index)}>Deleate</button>
+      <div id="big">
 
+        <form onSubmit={add}>
+          <input onChange={change} ></input>
+        </form>
         
-          </div>
+      { note.map((c,index) => {
+          return(
+            <div  >
+              <p>{c.value} id:{c.id}</p>
+              <button onClick={remove(index)}>Deleate</button>
 
-        ) 
           
-      })}
-      <button id="add2" onClick={add}>+</button>
+            </div>
+
+          ) 
+            
+        })}
+        <button id="add2" onClick={add}>+</button>
 
 
 
-    </div>
+      </div>
+
+    </Draggable>
+
   );
 }

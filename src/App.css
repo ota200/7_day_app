@@ -9,7 +9,11 @@ body{
 
 #big{
     overflow: scroll;
-    height: 100vh;
+    height: 50vh;
+    width: 50vh;
+    border:solid;
+    position: absolute;
+    background-color: #FCF7F8;
 
 }
 
@@ -45,8 +49,16 @@ button{
 
 }
 .head_container {
-    display: grid;
-    grid-template-columns: 10% 80%;
+    border:solid;
+    position:absolute;
+}
+
+.size{
+    width:50%;
+    height:50%;
+    border:solid;
+    position:absolute;
+
 }
 
 /* FCF7F8  E2C044  FF785A  000000*/

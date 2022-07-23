@@ -2,13 +2,19 @@
 import './App.css'
 import Drag from './drag'
 import Notes from './notes'
-
+//import Draggable, {DraggableCore} from 'react-draggable';
 function App() {
   return (
-    <div className="head_container">
-      <Notes/>
-      <Drag/>
-    </div>
+      <div >
+
+          <Notes/>
+          <Notes/>
+          <Drag/>   
+          <Drag/>
+          <Notes/>
+          <Drag/>
+      </div>
+
   );
 }
 
