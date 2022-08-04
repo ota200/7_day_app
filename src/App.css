@@ -14,6 +14,7 @@ body{
     border:solid;
     position: absolute;
     background-color: #FCF7F8;
+    z-index: -1;
 
 }
 
@@ -59,6 +60,12 @@ button{
     border:solid;
     position:absolute;
 
+}
+
+.test {
+    margin:0;
+    width:30rem;
+    background-color: #E2C044;
 }
 
 /* FCF7F8  E2C044  FF785A  000000*/

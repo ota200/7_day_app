@@ -16,7 +16,13 @@ function Drags() {
 function Drag() {
 
 
+
+
   const [count, setCount] = useState([]);
+
+  const [id, setId] = useState();
+
+  let array = [0,1]
 
   function add(){
     setCount([...count,
@@ -26,22 +32,36 @@ function Drag() {
       }]);
   }
 
+  function getId(e){
+    setId(e.id)
+  }
+
 
   const remove = (index) => () =>
 
     setCount((count) => count.filter((_, i) => i !== index));
 
+  function up(){
+   console.log("hi")
+  }
+
+  function down(){
+    console.log("hi")
+  }
+
+  function move(){
+    console.log("hi")
+  }
+
 
   return (
-    <Draggable >
-      <div id="big">
+      <div id="big" >
         
         { count.map((c,index) => {
           return(
-            <Draggable > 
-              <div className ="handle" id={"co"+ Math.random()} key={c.id + Math.random()} >
-              
-                {c.name}
+            
+              <div className ="handle" id={"co"+ Math.random()} key={c.id + Math.random()} onMouseDown={down()} onMouseUp={up()} onMouseMove={move()} >
+                              {c.name}
 
                 <button onClick={remove(index)}>Deleate</button>
                 {c.id}
@@ -49,7 +69,7 @@ function Drag() {
                 key:{c.id + Math.random()}
 
               </div>
-            </Draggable>
+            
 
           ) 
             
@@ -59,7 +79,6 @@ function Drag() {
 
 
       </div>
-    </Draggable>
   );
 }
 
