@@ -16,9 +16,6 @@ function Drags() {
 
 function Drag() {
 
-
-
-
   const [count, setCount] = useState([]);
 
   const [id, setId] = useState();
